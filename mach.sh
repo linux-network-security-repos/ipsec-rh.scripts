@@ -22,5 +22,5 @@ ifconfig wlan1 up
 sleep 0.1
 /etc/init.d/networking start
 # UMMM, FIX THIS
-echo "Finished! Your interfaces now have a 00:00:00:00:00:00 MAC Address!"
+echo "Finished! Your interfaces now have a 00:00:00:00:00:0X MAC Address!"
 # Some Reason It Broke a Realtek Card. Be Careful...
