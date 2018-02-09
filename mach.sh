@@ -24,3 +24,4 @@ sleep 0.1
 # UMMM, FIX THIS
 echo "Finished! Your interfaces now have a 00:00:00:00:00:0X MAC Address!"
 # Some Reason It Broke a Realtek Card. Be Careful...
+# YIKES
