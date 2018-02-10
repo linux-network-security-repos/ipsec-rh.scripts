@@ -5,8 +5,10 @@
 # Further testing required
 # ......
 # Intended for use with stock kali-linux packages
-apt update && apt install reaver bully
+# apt update && apt install reaver bully
 # Scripting user input for target, channel, interface
+echo "You need an adapter in monitor mode to use this"
+sleep 10
 iwconfig
 echo "What interface do we use?:"
 read interface
