@@ -2,9 +2,6 @@
 # MACH - ifconfig based mac changer written by Diveyez 2/10/2018
 echo "You may need to change the names of your interfaces in this script for it to work!"
 sleep 3.0
-#ifconfig eth0 down
-#ifconfig wlan0 down
-#ifconfig wlan1 down
 #/etc/init.d/networking stop
 sleep 0.1
 ifconfig eth0 down
@@ -32,4 +29,3 @@ sleep 0.1
 echo "Finished! Your interfaces now have a entirely random MAC Address!"
 # Some Reason It Broke a Realtek Card. Be Careful...
 # YIKES
-
