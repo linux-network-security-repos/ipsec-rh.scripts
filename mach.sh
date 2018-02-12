@@ -1,7 +1,7 @@
 #!/bin/bash
 # MACH - ifconfig based mac changer written by Diveyez 2/10/2018
-echo "You may need to change the names of your interfaces in this script for it to work!"
-sleep 3.0
+echo "You may need to change the names of your interfaces in this script for it to work, You have 5 seconds to do that before erorrs occur."
+sleep 5.0
 #/etc/init.d/networking stop
 sleep 0.1
 ifconfig eth0 down
