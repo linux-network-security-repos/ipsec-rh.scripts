@@ -9,3 +9,6 @@ I will be submitting reports to the vendors and ISP's who are vulnerable to the 
 I will also be developing a gateway software to hide routers from airodump polls
 
 Recently added: Wep cracking scripts. These are for fun, if someone decides to use WEP, I use this to show them how easy the network can be broken into. Even with mac filtering.
+
+Some friends have donated some code, and asked me to include some other code so not only is this focused on pentesting AP's but hosts as well.
+Browse around and take what you like. We dun curr.... ;)
