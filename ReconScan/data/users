@@ -8,3 +8,6 @@ guest
 user
 web
 test
+netdev
+nobody
+pi

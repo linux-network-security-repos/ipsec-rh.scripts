@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#
 
 import os
 import sys
@@ -280,7 +281,7 @@ def run_amap(services, only_unidentified=True):
 
 def enum_http(address, port, service, basedir):
 	scheme = 'https' if 'https' in service or 'ssl' in service else 'http'
-	nikto_ssl = ' -ssl' if 'https' in service or 'ssl' in service else '' 
+	nikto_ssl = ' -ssl' if 'https' in service or 'ssl' in service else ''
 
 	run_cmds([
 		(
@@ -312,7 +313,7 @@ def enum_http(address, port, service, basedir):
 	])
 	#try:
 	#	with open(os.path.join('.', e('nikto_{address}.sh')), 'a') as file:
-	#		file.writelines(e('nikto -h {scheme}://{address}:{port}{nikto_ssl} -o "{basedir}/{port}_http_nikto.txt"') + '\n') 
+	#		file.writelines(e('nikto -h {scheme}://{address}:{port}{nikto_ssl} -o "{basedir}/{port}_http_nikto.txt"') + '\n')
 	#except:
 	#	pass
 
@@ -380,7 +381,7 @@ def enum_ftp(address, port, service, basedir):
 
 def enum_smb(address, port, service, basedir):
 	global hadsmb
-	
+
 	if hadsmb:
 		return
 
@@ -628,7 +629,7 @@ def scan_service(address, port, service):
 	else:
 		if port <= 1024:
 			warn('Service {byellow}{service}{rst} will be scanned generically.')
-			
+
 			enum_generic_udp(address, port, service, basedir)
 
 		else:
