@@ -7,11 +7,13 @@
 # Intended for use with stock kali-linux packages
 apt update && apt install reaver bully airmon-ng aireplay-ng macchanger pixiewps
 # Scripting user input for target, channel, interface
+#
 echo "You need an adapter in monitor mode to use this, airmon-ng start <interface> if you have not done that already!"
 sleep 1.5
 echo "What interface do we use?:"
 read interface
 echo "Using:" $interface;
+airmon-ng start $interface
 echo "What channel is target on?:"
 read channel
 echo "Using Channel:" $channel;
